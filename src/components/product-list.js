@@ -12,6 +12,10 @@ import {
   Icon,
   LinkList,
 } from "./ui"
+const styleD = {
+  height: '6rem',
+  
+}
 
 function Product(props) {
   return (
@@ -23,17 +27,39 @@ function Product(props) {
           size="large"
         />
       )}
-      <Subhead>{props.heading}</Subhead>
+      <Subhead style={styleD}>{props.heading}</Subhead>
       <Text>{props.text}</Text>
       <LinkList links={props.links} />
     </Box>
   )
 }
 
+const styleB = {
+
+  display: 'flex',
+  flexWrap: 'wrap',
+  listStyle: 'none',
+
+}
+const styleA = {
+
+  display: 'flex',
+  flexDirection: 'column'
+
+
+}
+
+const styleC = {
+
+  width:'30%',
+
+  margin: '0.5rem'
+
+}
 export default function ProductList(props) {
   return (
     <Section>
-      <Container>
+      <Container style={styleA}>
         <Box center paddingY={4}>
           <Heading>
             {props.kicker && <Kicker>{props.kicker}</Kicker>}
@@ -41,13 +67,14 @@ export default function ProductList(props) {
           </Heading>
           {props.text && <Text>{props.text}</Text>}
         </Box>
-        <FlexList gap={4} variant="responsive">
+        <ul style={styleB}>
           {props.content.map((product) => (
-            <li key={product.id}>
+            <li key={product.id} style={styleC}>
               <Product {...product} />
+              <br/>
             </li>
           ))}
-        </FlexList>
+        </ul>
       </Container>
     </Section>
   )

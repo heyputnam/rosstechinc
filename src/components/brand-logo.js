@@ -1,10 +1,10 @@
 import * as React from "react"
-import Logo from '../../docs/images/logo2.png'
+import Logo from '../../docs/images/logo.png'
 
 
 const logoStyle =  {
-  width: '7.5rem',
-  height: '7.5rem',
+  width: '20rem',
+  height: '10rem',
 }
 export default function GatsbyContentfulLogo() {
   return (
