@@ -6,7 +6,7 @@ import Fallback from "../components/fallback"
 
 export default function About(props) {
   const { aboutPage } = props.data
-
+console.log(props.data)
   return (
     <Layout {...aboutPage}>
       {aboutPage.blocks.map((block) => {
