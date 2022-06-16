@@ -77,6 +77,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
 
   // abstract interfaces
   actions.createTypes(/* GraphQL */ `
+
     interface HomepageBlock implements Node {
       id: ID!
       blocktype: String
@@ -125,6 +126,14 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: HomepageImage
       text: String
       links: [HomepageLink]
+    }
+
+    interface ServiceHero implements Node & HomepageBlock {
+      id: ID!
+      blocktype: String
+      heading: String
+      text: String
+      image: HomepageImage
     }
 
     interface HomepageFeature implements Node & HomepageBlock {
@@ -381,7 +390,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       @dontInfer {
       id: ID!
       blocktype: String @blocktype
-      heading: String!
+      heading: String
       kicker: String
       subhead: String
       image: HomepageImage @link(from: "image___NODE")
@@ -521,7 +530,14 @@ exports.createSchemaCustomization = async ({ actions }) => {
       text: String
       image: HomepageImage @link(from: "image___NODE")
     }
-
+    type ContentfulServiceHero implements Node & ServiceHero  & HomepageBlock
+      @dontInfer {
+      id: ID!
+      blocktype: String @blocktype
+      heading: String
+      text: String
+      image: HomepageImage @link(from: "image___NODE")
+    }
     type ContentfulAboutStat implements Node & AboutStat @dontInfer {
       id: ID!
       value: String

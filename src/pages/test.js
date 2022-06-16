@@ -7,7 +7,7 @@ import Fallback from "../components/fallback"
 export default function service(props) {
   const  servicePage  = props.data.contentfulServicePage
 
-  console.log(props.data.contentfulServicePage.blocks)
+  console.log(props.data.contentfulServicePage.blocks[2].blocktype)
 
   return (
     <Layout {...servicePage}>
@@ -44,6 +44,17 @@ export const query = graphql`
           }
         }
         ... on HomepageHero{
+          id
+          blocktype
+          text
+          heading
+          image{
+            url
+            alt
+            gatsbyImageData
+          }
+        }
+        ... on ServiceHero{
           id
           blocktype
           text
