@@ -78,6 +78,15 @@ exports.createSchemaCustomization = async ({ actions }) => {
   // abstract interfaces
   actions.createTypes(/* GraphQL */ `
 
+
+
+
+
+
+
+
+
+
     interface HomepageBlock implements Node {
       id: ID!
       blocktype: String
@@ -128,6 +137,13 @@ exports.createSchemaCustomization = async ({ actions }) => {
       links: [HomepageLink]
     }
 
+
+
+
+
+
+
+
     interface ServiceHero implements Node & HomepageBlock {
       id: ID!
       blocktype: String
@@ -135,6 +151,24 @@ exports.createSchemaCustomization = async ({ actions }) => {
       text: String
       image: HomepageImage
     }
+
+
+
+    interface ServiceType implements Node & HomepageBlock {
+      id: ID!
+      blocktype: String
+      heading: String
+      description: String
+      image: HomepageImage
+
+    }
+
+
+
+
+
+
+
 
     interface HomepageFeature implements Node & HomepageBlock {
       id: ID!
@@ -145,6 +179,8 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: HomepageImage
       links: [HomepageLink]
     }
+
+
 
     interface HomepageFeatureList implements Node & HomepageBlock {
       id: ID!
@@ -349,6 +385,9 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: HomepageImage
       html: String!
     }
+
+
+  
   `)
 
   // CMS-specific types for Homepage
@@ -518,6 +557,8 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: HomepageImage @link(from: "image___NODE")
       content: [HomepageBlock] @link(from: "content___NODE")
     }
+
+
   `)
 
   // CMS specific types for About page
@@ -538,6 +579,18 @@ exports.createSchemaCustomization = async ({ actions }) => {
       text: String
       image: HomepageImage @link(from: "image___NODE")
     }
+
+
+    type ContentfulServiceType implements Node & ServiceType  & HomepageBlock
+      @dontInfer {
+      id: ID!
+      blocktype: String @blocktype
+      heading: String
+      description: String
+      image: HomepageImage @link(from: "image___NODE")
+    }
+
+
     type ContentfulAboutStat implements Node & AboutStat @dontInfer {
       id: ID!
       value: String
