@@ -11,8 +11,8 @@ export default function ServiceType(props) {
         <SuperHeading className={styles.aboutHeroHeader}>
           {props.heading}
         </SuperHeading>
-        {props.text && (
-          <Text className={styles.aboutHeroText}>{props.text}</Text>
+        {props.description && (
+          <Text className={styles.aboutHeroText}>{props.description}</Text>
         )}
       </Container>
       <Container width="wide">

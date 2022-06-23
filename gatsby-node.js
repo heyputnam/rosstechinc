@@ -386,8 +386,14 @@ exports.createSchemaCustomization = async ({ actions }) => {
       html: String!
     }
 
+    interface ServicePage implements Node {
+      id: ID!
+      title: String
+      description: String
+      image: HomepageImage
+      content: [HomepageBlock]
+    }
 
-  
   `)
 
   // CMS-specific types for Homepage
@@ -557,6 +563,19 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: HomepageImage @link(from: "image___NODE")
       content: [HomepageBlock] @link(from: "content___NODE")
     }
+
+
+
+    type ContentfulServicePage implements Node & ServicePage @dontInfer {
+      id: ID!
+      title: String
+      description: String
+      image: HomepageImage @link(from: "image___NODE")
+      content: [HomepageBlock] @link(from: "content___NODE")
+    }
+
+
+
 
 
   `)
