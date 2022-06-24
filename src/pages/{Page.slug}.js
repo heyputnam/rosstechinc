@@ -7,7 +7,16 @@ import Fallback from "../components/fallback"
 
 export default function Page(props) {
   const { page } = props.data
+  const pageImage = page.body.references.map((reference)=>{
+      return(
+
+
+                      <img src={reference.url} key={reference.id}></img>
+
+      )
+    })
 console.log(props.data)
+console.log(pageImage)
 
   return (
     <Layout {...page}>
@@ -15,15 +24,14 @@ console.log(props.data)
         <Container width="narrow">
           <Heading as="h1">{page.title}</Heading>
           <img src={page.image.url}></img>
+
           <div
+                      dangerouslySetInnerHTML={{
+                        __html: page.html
 
-            dangerouslySetInnerHTML={{
-              __html: page.html,
-
-            }}
-
-          />
-
+                      }}
+                      />
+                      {pageImage}
 
 
         </Container>
