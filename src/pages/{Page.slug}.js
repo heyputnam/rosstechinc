@@ -23,7 +23,7 @@ console.log(pageImage)
       <Box paddingY={5}>
         <Container width="narrow">
           <Heading as="h1">{page.title}</Heading>
-          <img src={page.image.url}></img>
+          
 
           <div
                       dangerouslySetInnerHTML={{
