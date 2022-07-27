@@ -12,6 +12,7 @@ import {
   Subhead,
   Text,
 } from "./ui"
+import Slider from "../components/slider"
 
 export default function Hero(props) {
   return (
@@ -19,12 +20,7 @@ export default function Hero(props) {
       <Container>
         <Flex gap={4} variant="responsive">
           <Box width="half">
-            {props.image && (
-              <GatsbyImage
-                alt={props.image.alt}
-                image={getImage(props.image.gatsbyImageData)}
-              />
-            )}
+            <Slider />
           </Box>
           <Box width="half">
             <Heading as="h1">
