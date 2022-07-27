@@ -33,7 +33,8 @@ import { Carousel } from 'react-responsive-carousel'
         infiniteLoop={true}
           showArrows={false}
         showIndicators={false}
-      showThumbs={false}>
+      showThumbs={false}
+      showStatus={false}>
 
       <div>
         <img src={imageData[0].url}/>

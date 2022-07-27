@@ -5,6 +5,7 @@ import { mobileNavLink } from "./header.css"
 
 export const navGroupWrapper = style({
   position: "relative",
+
 })
 
 export const navGroupTitle = style([

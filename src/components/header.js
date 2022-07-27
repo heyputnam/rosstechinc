@@ -75,7 +75,7 @@ export default function Header() {
   return (
     <header>
       <Container className={desktopHeaderNavWrapper}>
-        <Space size={2} />
+        <Space size={1} />
         <Flex variant="spaceBetween">
           <NavLink to="/">
             <VisuallyHidden>Home</VisuallyHidden>

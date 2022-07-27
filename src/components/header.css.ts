@@ -4,6 +4,7 @@ import { media } from "./ui.css"
 
 export const desktopHeaderNavWrapper = style({
   position: "relative",
+
   zIndex: 1,
   display: "none",
   "@media": {
