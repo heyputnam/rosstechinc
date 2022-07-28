@@ -43,9 +43,6 @@ import { Carousel } from 'react-responsive-carousel'
         <img src={imageData[1].url}/>
       </div>
       <div>
-        <img src={imageData[2].url} height='325px'/>
-      </div>
-      <div>
         <img src={imageData[3].url}/>
       </div>
   </Carousel>

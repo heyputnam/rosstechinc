@@ -13,8 +13,8 @@ import {
   LinkList,
 } from "./ui"
 const styleD = {
-  height: '6rem',
-  
+padding: '2rem'
+
 }
 
 function Product(props) {
@@ -28,7 +28,7 @@ function Product(props) {
         />
       )}
       <Subhead style={styleD}>{props.heading}</Subhead>
-      <Text>{props.text}</Text>
+      <Text style={styleE}>{props.text}</Text>
       <LinkList links={props.links} />
     </Box>
   )
@@ -39,28 +39,41 @@ const styleB = {
   display: 'flex',
   flexWrap: 'wrap',
   listStyle: 'none',
+  padding: '2rem'
+
 
 }
 const styleA = {
 
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
+
+
 
 
 }
 
 const styleC = {
 
-  width:'30%',
+    width:'33%',
+    padding: '2.5rem'
 
-  margin: '0.5rem'
+
+
+}
+
+const styleE = {
+
+    marginBottom: '1rem'
+
+
 
 }
 export default function ProductList(props) {
   return (
     <Section>
       <Container style={styleA}>
-        <Box center paddingY={4}>
+        <Box center paddingY={1}>
           <Heading>
             {props.kicker && <Kicker>{props.kicker}</Kicker>}
             {props.heading}
