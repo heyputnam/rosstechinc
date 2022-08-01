@@ -28,7 +28,6 @@
     "gatsby-source-contentful": "^7.2.0",
     "gatsby-source-filesystem": "^4.15.0",
     "gatsby-transformer-sharp": "^4.15.0",
-    "gatsby-wpgraphql-inline-images": "^0.2.5",
     "is-absolute-url": "^4.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

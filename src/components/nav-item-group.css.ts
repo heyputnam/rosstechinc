@@ -15,7 +15,7 @@ export const navGroupTitle = style([
     "@media": {
       [media.small]: {
         padding: 0,
-        alignItems: "baseline",
+          alignItems: "baseline",
         color: "inherit",
         fontSize: "inherit",
         ":hover": { color: theme.colors.active },
@@ -36,6 +36,7 @@ const navLinkListWrapperBase = style({
   position: "relative",
   whiteSpace: "nowrap",
   width: "fit-content",
+
   "@media": {
     [media.small]: {
       position: "absolute",

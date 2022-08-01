@@ -9,6 +9,8 @@ const Layout = (props) => {
     <>
       <Head {...props} />
       <Header />
+      <br/>
+
       {props.children}
       <Footer />
     </>

@@ -16,7 +16,7 @@ import Slider from "../components/slider"
 
 export default function Hero(props) {
   return (
-    <Section>
+    <Section >
       <Container>
         <Flex gap={4} variant="responsive">
           <Box width="half">
