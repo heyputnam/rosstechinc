@@ -17,7 +17,7 @@ module.exports = {
       options: {
         downloadLocal: true,
         spaceId: '6v3pf8zx5bnf',
-        accessToken: 'riMbJ2gR5BUAr5CX6BtFwPps3vbnGio3RV-wET22Go',
+        accessToken: 'iriMbJ2gR5BUAr5CX6BtFwPps3vbnGio3RV-wET22Go',
         host: process.env.CONTENTFUL_HOST,
       },
     },
