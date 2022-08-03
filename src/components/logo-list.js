@@ -1,6 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { Space, Container, Section, FlexList, Text, Logo } from "./ui"
+import { Space, Container, Section, FlexList, Text, Logo, Heading } from "./ui"
 
 export function LogoItem(props) {
   if (!props.image) return null
@@ -15,11 +15,13 @@ export default function LogoList(props) {
     <Section paddingY={4}>
       <Container width="narrow">
         {props.text && (
-          <Text center variant="lead">
+          <Heading center as="h1" style={{
+            paddingBottom: '2em'
+          }}>
             {props.text}
-          </Text>
+          </Heading>
         )}
-        <Space size={4} />
+        <Space size={2} />
         <FlexList gap={4} variant="center">
           {props.logos.map(
             (logo) =>

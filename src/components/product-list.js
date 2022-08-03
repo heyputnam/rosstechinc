@@ -19,7 +19,7 @@ padding: '2rem'
 
 function Product(props) {
   return (
-    <Box center>
+    <Box padding={1} center>
       {props.image && (
         <Icon
           alt={props.image.alt}
@@ -27,8 +27,8 @@ function Product(props) {
           size="large"
         />
       )}
-      <Subhead style={styleD}>{props.heading}</Subhead>
-      <Text style={styleE}>{props.text}</Text>
+      <Subhead>{props.heading}</Subhead>
+      <Text>{props.text}</Text>
       <LinkList links={props.links} />
     </Box>
   )

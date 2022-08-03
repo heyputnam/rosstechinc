@@ -8,20 +8,23 @@ import {
   Heading,
   Text,
   ButtonList,
+  Box,
   Kicker,
 } from "./ui"
 
 export default function HomepageCta(props) {
   return (
     <Container width="fullbleed">
-      <Section padding={5} radius="large" background="primary">
+      <Section padding={4} radius="large" background="primary">
         <Heading center>
           {props.kicker && <Kicker center>{props.kicker}</Kicker>}
           {props.heading}
         </Heading>
+        
         <Text as="p" center variant="lead">
           {props.text}
         </Text>
+
         <ButtonList links={props.links} variant="center" reversed />
         {props.image && (
           <Nudge left={5} right={5} bottom={5}>

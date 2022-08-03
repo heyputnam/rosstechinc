@@ -3,17 +3,17 @@ import { theme } from "../theme.css"
 import { media, container } from "./ui.css"
 
 export const desktopHeaderNavWrapper = style({
-  position: "fixed",
-  background: 'gray',
-  height: '10vh',
-  width: '100vw',
+  position: "relative",
+
   zIndex: 1,
-//  display: "none",
-
-
-
+  display: "none",
+  "@media": {
+    [media.small]: {
+      display: "block",
+      paddingTop: theme.space[4],
+    },
+  },
 })
-
 const mobileHeaderNavWrapperBase = style({
   display: "block",
   position: "relative",

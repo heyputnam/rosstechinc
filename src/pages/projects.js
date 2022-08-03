@@ -3,6 +3,15 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import * as sections from "../components/sections"
 import Fallback from "../components/fallback"
+import {
+  Nudge,
+  Container,
+  Section,
+  Heading,
+  Text,
+  ButtonList,
+  Kicker,
+} from "../components/ui"
 
 export default function project(props) {
   const  projectPage  = props.data.contentfulProjectPage
@@ -11,12 +20,14 @@ export default function project(props) {
 
   return (
     <Layout {...projectPage}>
+    <Container>
+    <Kicker>RTS Project History</Kicker>
     {projectPage.blocks.map((block) => {
       const { id, blocktype, ...componentProps } = block
       const Component = sections[blocktype] || Fallback
       return <Component key={id} {...componentProps} />
     })}
-
+    </Container>
     </Layout>
   )
 }

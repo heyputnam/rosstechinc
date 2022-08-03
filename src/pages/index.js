@@ -35,7 +35,6 @@ export const query = graphql`
         ...HomepageFeatureListContent
         ...HomepageCtaContent
         ...HomepageLogoListContent
-        ...HomepageStatListContent
         ...HomepageProductListContent
       }
     }

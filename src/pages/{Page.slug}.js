@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { Container, Box, Heading } from "../components/ui"
+import { Container, Box, Heading, Flex, Section } from "../components/ui"
 import * as sections from "../components/sections"
 import Fallback from "../components/fallback"
 
@@ -11,31 +11,43 @@ export default function Page(props) {
       return(
 
 
-                      <img src={reference.url} key={reference.id}></img>
+                    <img src={reference.url} key={reference.id}></img>
 
       )
     })
 console.log(props.data)
 console.log(pageImage)
 
+
+
+
+
   return (
     <Layout {...page}>
-      <Box paddingY={5}>
-        <Container width="narrow">
-          <Heading as="h1">{page.title}</Heading>
-          
+    <Container>
+    <Section>
+    <Heading as="h1" style={{
+      textAlign: 'center',
+    }}>
+    {page.title}
+    </Heading>
+    </Section>
+          <Section padding={4} radius="large" background="primary">
+    <Flex gap={2} variant="responsive">
+      <Box width="half">
+        {pageImage}
+      </Box>
+      <Box width="half">
 
           <div
-                      dangerouslySetInnerHTML={{
-                        __html: page.html
-
+            dangerouslySetInnerHTML={{
+                __html: page.html
                       }}
-                      />
-                      {pageImage}
-
-
-        </Container>
+          />
       </Box>
+      </Flex>
+      </Section>
+        </Container>
     </Layout>
   )
 }

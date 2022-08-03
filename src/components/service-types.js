@@ -8,8 +8,10 @@ export default function ServiceType(props) {
   return (
     <Section>
       <Container>
+      
         <SuperHeading className={styles.aboutHeroHeader}>
           {props.heading}
+
         </SuperHeading>
         {props.description && (
           <Text className={styles.aboutHeroText}>{props.description}</Text>
