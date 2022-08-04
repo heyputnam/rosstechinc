@@ -6,6 +6,7 @@ import {
   Flex,
   FlexList,
   Space,
+  Section,
   NavLink,
   Button,
   InteractiveIcon,
@@ -159,6 +160,10 @@ export default function Header() {
           </nav>
         </div>
       )}
+      <Section>
+      </Section>
     </header>
+
+
   )
 }

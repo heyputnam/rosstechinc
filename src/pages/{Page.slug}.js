@@ -25,14 +25,14 @@ console.log(pageImage)
   return (
     <Layout {...page}>
     <Container>
-    <Section>
+
     <Heading as="h1" style={{
       textAlign: 'center',
     }}>
     {page.title}
     </Heading>
-    </Section>
-          <Section padding={4} radius="large" background="primary">
+      <Section padding={4} radius="large" >
+
     <Flex gap={2} variant="responsive">
       <Box width="half">
         {pageImage}

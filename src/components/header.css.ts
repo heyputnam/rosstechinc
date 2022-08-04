@@ -3,14 +3,21 @@ import { theme } from "../theme.css"
 import { media, container } from "./ui.css"
 
 export const desktopHeaderNavWrapper = style({
-  position: "relative",
-
+  alignItems: 'center',
   zIndex: 1,
   display: "none",
+  width: "100vw",
+
+
   "@media": {
     [media.small]: {
-      display: "block",
-      paddingTop: theme.space[4],
+      display: "flex",
+      paddingBottom: theme.space[1],
+
+      background: '#EBE9E7',
+      position: 'fixed',
+      height: "10vh",
+
     },
   },
 })

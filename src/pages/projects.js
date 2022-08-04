@@ -21,7 +21,7 @@ export default function project(props) {
   return (
     <Layout {...projectPage}>
     <Container>
-    <Kicker>RTS Project History</Kicker>
+    
     {projectPage.blocks.map((block) => {
       const { id, blocktype, ...componentProps } = block
       const Component = sections[blocktype] || Fallback

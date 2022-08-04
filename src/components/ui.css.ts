@@ -105,7 +105,7 @@ export const flexVariants: Record<FlexVariants, string> = styleVariants({
     width: "100%",
     flexWrap: "wrap",
     justifyContent: "space-between",
-  
+
   },
   center: {
     width: "100%",

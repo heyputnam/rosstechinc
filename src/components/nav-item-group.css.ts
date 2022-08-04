@@ -27,7 +27,7 @@ export const navGroupTitle = style([
 export const navGroupTitleInner = style({
   "@media": {
     [media.small]: {
-      alignItems: "baseline",
+    alignItems: "baseline",
     },
   },
 })
