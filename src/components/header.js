@@ -75,7 +75,7 @@ export default function Header() {
 
   return (
     <header>
-      <Container className={desktopHeaderNavWrapper}>
+      <Container className={desktopHeaderNavWrapper} width="full">
         <Space size={-4} />
         <Flex variant="spaceBetween">
           <NavLink to="/">
