@@ -9,18 +9,18 @@ export default function AboutHero(props) {
 
       <Container width="normal">
       <Section>
-      <SuperHeading center>
+      <SuperHeading center >
         {props.heading}
       </SuperHeading>
       </Section>
-        <Section radius="large" width='narrow' background="primary">
+      <Section radius="large" width='narrow'>
 
-      {props.image && (
-        <GatsbyImage
-          alt={props.image.alt}
-          image={getImage(props.image.gatsbyImageData)}
-          className={styles.aboutHeroImage}
-        />
+    {props.image && (
+      <GatsbyImage
+        alt={props.image.alt}
+        image={getImage(props.image.gatsbyImageData)}
+        className={styles.aboutHeroImage}
+      />
       )}
 
 

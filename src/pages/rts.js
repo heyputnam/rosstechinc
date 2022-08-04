@@ -26,6 +26,7 @@ import {
 } from "../components/ui"
 
 export default function service(props) {
+      const { aboutPage } = props.data
 console.log(props)
   return (
     <Layout>
@@ -73,7 +74,14 @@ console.log(props)
 
         </Flex>
         </Section>
+        <Container>
 
+        {aboutPage.blocks.map((block) => {
+          const { id, blocktype, ...componentProps } = block
+          const Component = sections[blocktype] || Fallback
+          return <Component key={id} {...componentProps} />
+        })}
+        </Container>
 
 <Section  width="wide" >
 <Heading center>Conviently located in Ellicott City</Heading>
@@ -91,19 +99,26 @@ console.log(props)
 }
 
 
-export const testquesy = graphql`
+export const rtsQuery = graphql`
+  {
+    aboutPage {
+      id
+      title
+      description
+      image {
+        id
+        url
+      }
+      blocks: content {
+        id
+        blocktype
+        ...AboutHeroContent
+        ...AboutStatListContent
+        ...HomepageProductListContent
+        ...AboutLeadershipContent
+        ...HomepageBenefitListContent
 
-{
-   allContentfulImageSlider {
-     nodes {
-       id
-       name
-       images {
-         title
-         gatsbyImageData
-         description
-       }
-     }
-   }
- }
+      }
+    }
+  }
 `
