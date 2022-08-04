@@ -4,7 +4,7 @@ import { theme } from "../theme.css"
 export const heading = style({
   fontFamily: theme.fonts.mono,
   fontStyle: "normal",
-  letterSpacing: "-0.02em",
+  letterSpacing: "-0.03em",
 })
 
 export const link = style({
