@@ -8,6 +8,9 @@ import Cat from "../../docs/images/logo3.png"
 import People from "../../docs/images/people.jpg"
 import Idk from "../../docs/images/b.webp"
 import Plant from "../../docs/images/plant.jpg"
+import Work from "../../docs/images/work.jpg"
+import Work2 from "../../docs/images/work2.jpeg"
+import Logo2 from "../../docs/images/logo5.png"
 import GoogleMap from '../components/map'
 
 import {
@@ -74,6 +77,7 @@ console.log(props)
 
         </Flex>
         </Section>
+
         <Container>
 
         {aboutPage.blocks.map((block) => {
@@ -82,7 +86,22 @@ console.log(props)
           return <Component key={id} {...componentProps} />
         })}
         </Container>
+        <Section>
+        <Flex gap={5} variant="responsive">
+              <Box width="third">
 
+                    <img src={Work} height="400px" width="400px"></img>
+
+
+                      </Box>
+                        <Box width="third">
+                          <img src={Logo2} height="400px" width="400px"></img>
+                            </Box>
+                            <Box width="third">
+                              <img src={Work2} height="400px" width="400px"></img>
+                              </Box>
+                    </Flex>
+                    </Section>
 <Section  width="wide" >
 <Heading center>Conviently located in Ellicott City</Heading>
 <Kicker center>Ross Technical Services</Kicker>
