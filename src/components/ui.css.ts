@@ -484,27 +484,27 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
   primary: [
     button,
     {
-      color: theme.colors.background,
-      backgroundColor: theme.colors.primary,
+      color: theme.colors.black,
+      backgroundColor: theme.colors.active,
       ":hover": {
-        backgroundColor: theme.colors.active,
+        backgroundColor: theme.colors.white,
       },
       ":focus": {
-        backgroundColor: theme.colors.active,
+        backgroundColor: theme.colors.white,
       },
     },
   ],
   reversed: [
     button,
     {
-      color: theme.colors.primary,
+      color: theme.colors.black,
       backgroundColor: theme.colors.background,
       ":hover": {
-        color: theme.colors.background,
+        color: theme.colors.black,
         backgroundColor: theme.colors.active,
       },
       ":focus": {
-        color: theme.colors.background,
+        color: theme.colors.black,
         backgroundColor: theme.colors.active,
       },
     },
@@ -528,11 +528,11 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
       color: "inherit",
       backgroundColor: "transparent",
       ":hover": {
-        color: theme.colors.primary,
+        color: theme.colors.black,
         backgroundColor: theme.colors.muted,
       },
       ":focus": {
-        color: theme.colors.primary,
+        color: theme.colors.black,
         backgroundColor: theme.colors.muted,
       },
     },
@@ -543,11 +543,11 @@ export type Backgrounds = "primary" | "muted"
 
 export const backgrounds: Record<Backgrounds, string> = styleVariants({
   primary: {
-    color: theme.colors.background,
+    color: theme.colors.black,
     backgroundColor: theme.colors.primary,
   },
   muted: {
-    color: theme.colors.primary,
+    color: theme.colors.black,
     backgroundColor: theme.colors.muted,
   },
 })
